@@ -6,8 +6,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="/style/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1&family=M+PLUS+1p:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<body>
-<h1>Hello</h1>
+<body class="body">
+  <header class="header">
+    <a class="header__logo" href="index.html">
+      <img class="header__image" src="img/logo.svg" width="42" height="50" alt="Логотип.">
+    </a>
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--active" href="#">Пункт 1</a>
+          <ul class="secondery-nav">
+            <li class="secondery-nav__item">
+              <a class="secondery-nav__link" href="#">Подпункт меню</a>
+            </li>
+            <li class="secondery-nav__item">
+              <a class="secondery-nav__link" href="#">Подпункт меню</a>
+            </li>
+            <li class="secondery-nav__item">
+              <a class="secondery-nav__link" href="#">Подпункт меню</a>
+            </li>
+          </ul>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Пункт 2</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Пункт 3</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Пункт 4</a>
+          <ul class="secondery-nav">
+            <li class="secondery-nav__item">
+              <a class="secondery-nav__link" href="#">Подпункт меню</a>
+            </li>
+            <li class="secondery-nav__item">
+              <a class="secondery-nav__link" href="#">Подпункт меню</a>
+            </li>
+            <li class="secondery-nav__item">
+              <a class="secondery-nav__link" href="#">Подпункт меню</a>
+            </li>
+          </ul>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Пункт 5</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+<script src="js/index.js" type="module"></script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+@mixin container-desktop {
+  padding: 0 100px;
+}
+
+@mixin container-mobile {
+  padding: 0 15px;
+}
+
+@mixin mplus1p-medium {
+  font-family: 'M PLUS 1p', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@mixin mplus1p-regular {
+  font-family: 'M PLUS 1p', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin mplus1-regular {
+  font-family: 'M PLUS 1', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}

@@ -1,3 +1,4 @@
-body {
-  background-color: tomato;
-}
+@use "./global/variables.scss";
+@use "./global/mixins.scss";
+@use "./blocks/body.scss";
+@use "./blocks/header.scss";
