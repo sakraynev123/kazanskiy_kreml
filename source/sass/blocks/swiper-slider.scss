@@ -1,0 +1,56 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
+.swiper-slider {
+  position: relative;
+}
+
+.swiper-wrapper {
+  margin-bottom: 20px;
+}
+
+.swiper-slider__text-wrapper {
+  position: absolute;
+  bottom: 39px;
+  left: 20px;
+}
+
+.swiper-slider__text-wrapper--empty-description {
+  bottom: 159px;
+}
+
+.swiper-slider__title {
+  margin: 0;
+  @include mixins.mplus1p-medium;
+  font-size: 40px;
+  line-height: 85px;
+  letter-spacing: -0.03em;
+  color: variables.$white;
+}
+
+.swiper-slider__image {
+  display: block;
+  border-radius: 6px;
+}
+
+.swiper-slider__description {
+  color: variables.$white;
+  margin: 0;
+  @include mixins.mplus1p-regular;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+}
+
+.swiper__button-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.swiper__custom-button:hover {
+  svg {
+    path {
+      fill: #75FF77;
+    }
+  }
+}

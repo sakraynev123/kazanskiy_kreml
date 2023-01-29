@@ -2,19 +2,22 @@
 @use "../global/mixins.scss";
 
 .main-nav {
-  display: none;
+  position: absolute;
+  // display: none;
+  transition: transform 0.4s;
+  transform: translateX(100%);
+  right: 0;
+  top: 0;
+  padding: 120px 10px 10px 50px;
+  width: 78%;
+  height: 100vh;
+  z-index: 3;
+  background-color: variables.$black;
 }
 
 .main-nav--active {
-  display: block;
-  position: absolute;
+  transform: translateX(0);
   background-color: variables.$black;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  padding: 120px 10px 10px 50px;
-  width: 78%;
-  z-index: 2;
 }
 
 .main-nav__list {

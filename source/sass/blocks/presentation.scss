@@ -1,0 +1,7 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
+.presentation {
+  background-color: variables.$black;
+  padding-bottom: 80px;
+}

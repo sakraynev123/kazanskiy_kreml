@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="/style/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,28 +71,44 @@
   <main class="main-container">
     <h1 class="visually-hidden">Музей заповедник "Казанский Кремль"</h1>
     <section class="main-container__presentation presentation">
-      <h2 class="visuall-hidden">Презентация.</h2>
-      <div class="swiper-container">
+      <h2 class="visually-hidden">Презентация.</h2>
+      <div class="swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slider">
-            <img class="siper-slider__image" alt="Слайд 1." width="290" height="450" src="img/slides/slide1-mobile.jpg">
-            <p class="swiper-slider__title">Слайд 1</p>
+          <div class="swiper-slide">
+            <img class="swiper-slider__image" alt="Слайд 1." width="290" height="450" src="img/slides/slide1-mobile.jpg">
+            <div class="swiper-slider__text-wrapper">
+              <p class="swiper-slider__title">Слайд 1</p>
             <p class="swiper-slider__description">Средне вековая история ТатарстанаСредне вековая история Та тарстанаСре
               дневековая история ТатарстанаСредневеков ая</p>
+            </div>
           </div>
-          <div class="swiper-slider">
-            <img class="siper-slider__image" alt="Слайд 1." width="290" height="450" src="img/slides/slide2-mobile.jpg">
-            <p class="swiper-slider__title">Слайд 2</p>
+          <div class="swiper-slide">
+            <img class="swiper-slider__image" alt="Слайд 1." width="290" height="450" src="img/slides/slide2-mobile.jpg">
+            <div class="swiper-slider__text-wrapper swiper-slider__text-wrapper--empty-description">
+              <p class="swiper-slider__title">Слайд 2</p>
+            </div>
           </div>
-          <div class="swiper-slider">
-            <img class="siper-slider__image" alt="Слайд 1." width="290" height="450" src="img/slides/slide3-mobile.jpg">
-            <p class="swiper-slider__title">Слайд 3</p>
-            <p class="swiper-slider__description">Прозвучат произведения Иоганна Себастьяна Баха, Поля Жанжана, Фрэнка
-              Корделла, Андре Вайнена, Ефрема Подгайца</p>
+          <div class="swiper-slide">
+            <img class="swiper-slider__image" alt="Слайд 1." width="290" height="450" src="img/slides/slide3-mobile.jpg">
+            <div class="swiper-slider__text-wrapper">
+              <p class="swiper-slider__title">Слайд 3</p>
+              <p class="swiper-slider__description">Прозвучат произведения Иоганна Себастьяна Баха, Поля Жанжана, Фрэнка
+                Корделла, Андре Вайнена, Ефрема Подгайца</p>
+            </div>
           </div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper__button-wrapper">
+          <div class="swiper__custom-button swiper__custom-button-prev">
+            <svg width="102" height="24" viewBox="0 0 102 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.939339 10.9393C0.353554 11.5251 0.353554 12.4749 0.939339 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51471C13.1924 2.92892 13.1924 1.97918 12.6066 1.39339C12.0208 0.807604 11.0711 0.807604 10.4853 1.39339L0.939339 10.9393ZM102 10.5L2 10.5L2 13.5L102 13.5L102 10.5Z" fill="white"/>
+              </svg>
+          </div>
+          <div class="swiper__custom-button swiper__custom-button-next">
+            <svg width="102" height="24" viewBox="0 0 102 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M101.061 13.0607C101.646 12.4749 101.646 11.5251 101.061 10.9393L91.5147 1.3934C90.9289 0.807611 89.9792 0.807611 89.3934 1.3934C88.8076 1.97919 88.8076 2.92893 89.3934 3.51472L97.8787 12L89.3934 20.4853C88.8076 21.0711 88.8076 22.0208 89.3934 22.6066C89.9792 23.1924 90.9289 23.1924 91.5147 22.6066L101.061 13.0607ZM0 13.5H100V10.5H0V13.5Z" fill="white"/>
+              </svg>
+          </div>
+        </div>
       </div>
     </section>
     <section class="main-container__faq faq">
@@ -114,7 +131,7 @@
         </li>
       </ul>
     </section>
-    <section class="main-container__news news">
+    <!-- <section class="main-container__news news">
       <h2 class="news__title section-title">Новости</h2>
       <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -156,7 +173,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <section class="main-container__subscription subscription">
       <h2 class="subscription__title section-title">
         Подпишись
@@ -208,6 +225,7 @@
       </li>
     </ul>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="js/index.js" type="module"></script>
 </body>
 
