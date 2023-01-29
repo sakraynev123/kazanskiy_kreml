@@ -1,4 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.header {
+  padding: 0 15px;
+  background-color: #0B0A0D;
+  padding-top: 35px;
+  padding-bottom: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__button {
+  background-color: transparent;
+  border: none;
+  width: 36px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 7px;
+  padding: 0;
+  z-index: 3;
+}
+
+.header__button-line {
+  width: 100%;
+  background-color: #FFFFFF;
+  height: 3px;
+  transition: 0.4s;
+}
+
+.header__button-line--three {
+  width: 50%;
+}
+
+.header__button--close .header__button-line--one {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.header__button--close .header__button-line--two {
+  opacity: 0;
+}
+
+.header__button--close .header__button-line--three {
+  width: 100%;
+  transform: rotate(45deg) translate(-9px, -6px);
+}
+
+.header__wrapper {
+  display: none;
+}
+
+.header__wrapper--active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  display: flex;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+.main-nav {
+  display: none;
+}
+
+.main-nav--active {
+  display: block;
+  position: absolute;
+  background-color: #0B0A0D;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 120px 10px 10px 50px;
+  width: 78%;
+  z-index: 2;
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.main-nav__link {
+  font-family: "M PLUS 1p", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.secondery-nav {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: none;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.secondery-nav__link {
+  font-family: "M PLUS 1p", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.main-nav__item:hover .secondery-nav {
+  display: flex;
+  margin-top: 30px;
 }
 /*# sourceMappingURL=style.css.map */

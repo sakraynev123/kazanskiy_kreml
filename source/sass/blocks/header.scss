@@ -1,0 +1,65 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
+.header {
+  @include mixins.container-mobile;
+  background-color: variables.$black;
+  padding-top: 35px;
+  padding-bottom: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__button {
+  background-color: transparent;
+  border: none;
+  width: 36px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 7px;
+  padding: 0;
+  z-index: 3;
+}
+
+.header__button-line {
+  width: 100%;
+  background-color: variables.$white;
+  height: 3px;
+  transition: 0.4s;
+}
+
+.header__button-line--three {
+  width: 50%;
+}
+
+.header__button--close .header__button-line--one {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.header__button--close .header__button-line--two {
+  opacity: 0;
+}
+
+.header__button--close .header__button-line--three {
+  width: 100%;
+  transform: rotate(45deg) translate(-9px, -6px);
+}
+
+.header__wrapper {
+  display: none;
+}
+
+.header__wrapper--active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  display: flex;
+}
