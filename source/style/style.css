@@ -14,10 +14,6 @@ body {
   position: relative;
 }
 
-.body__active-menu {
-  overflow: hidden;
-}
-
 .header {
   padding: 0 15px;
   background-color: #0B0A0D;
@@ -68,6 +64,11 @@ body {
   transform: rotate(45deg) translate(-9px, -6px);
 }
 
+.header__button--close {
+  position: fixed;
+  right: 19px;
+}
+
 .header__wrapper {
   display: none;
 }
@@ -83,6 +84,22 @@ body {
   display: flex;
 }
 
+@media (min-width: 1440px) {
+  .header {
+    padding: 0 100px;
+    padding-top: 70px;
+    justify-content: flex-start;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+  .header__button {
+    display: none;
+  }
+  .header__logo {
+    margin-right: 213px;
+  }
+}
 .main-container {
   flex-grow: 1;
 }
@@ -107,6 +124,7 @@ body {
 .main-nav--active {
   transform: translateX(0);
   background-color: #0B0A0D;
+  position: fixed;
 }
 
 .main-nav__list {
@@ -150,11 +168,64 @@ body {
   color: #FFFFFF;
 }
 
-.main-nav__item:hover .secondery-nav {
-  display: flex;
-  margin-top: 30px;
+@media (max-width: 1439px) {
+  .main-nav__item:hover .secondery-nav {
+    display: flex;
+    margin-top: 30px;
+  }
 }
-
+@media (min-width: 1440px) {
+  .main-nav {
+    transform: none;
+    position: relative;
+    padding: 0;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+  }
+  .main-nav__list {
+    flex-direction: row;
+  }
+  .main-nav__item {
+    padding: 20px 0;
+    position: relative;
+  }
+  .secondery-nav {
+    margin-left: 0;
+  }
+  .main-nav__item:hover::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #FFFFFF;
+  }
+  .main-nav__item--active .secondery-nav {
+    position: absolute;
+    display: flex;
+    margin: 0;
+    top: 62px;
+    min-width: 110px;
+    padding-top: 75px;
+  }
+  .main-nav__item--active .secondery-nav__background {
+    position: fixed;
+    width: 100vw;
+    height: 288px;
+    left: 0;
+    top: 134px;
+    background-color: #0B0A0D;
+  }
+  .main-nav__item--active .secondery-nav__background::after {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
 .visually-hidden {
   position: absolute;
   width: 1px;

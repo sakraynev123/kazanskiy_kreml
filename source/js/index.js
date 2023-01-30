@@ -3,6 +3,23 @@ const menuBackground = document.querySelector('.header__wrapper');
 const menuNavigation = document.querySelector('.main-nav');
 const bodyOverflow = document.querySelector('.body');
 const accordionItems = document.querySelectorAll('.faq__item');
+const navItems = document.querySelectorAll('.secondery-nav__link');
+const seconderyNav = document.querySelectorAll('.secondery-nav');
+const mainNavItems = document.querySelectorAll('.main-nav__item');
+
+mainNavItems.forEach((item) => {
+  item.addEventListener('mouseover', (evt) => {
+    item.classList.add('main-nav__item--active')
+  })
+})
+
+document.addEventListener('mouseover', (evt) => {
+  if (!evt.target.classList.contains('secondery-nav') && !evt.target.classList.contains('secondery-nav__item') && !evt.target.classList.contains('secondery-nav__link') && !evt.target.classList.contains('main-nav__link') && !evt.target.classList.contains('main-nav__item')) {
+    mainNavItems.forEach((item) => {
+      item.classList.remove('main-nav__item--active')
+    })
+  }
+})
 
 accordionItems.forEach((item) => {
   item.addEventListener('click', () => {
@@ -21,7 +38,6 @@ buttonMenu.addEventListener('click', () => {
   menuNavigation.classList.toggle('main-nav--active');
   buttonMenu.classList.toggle('header__button--close');
   menuBackground.classList.toggle('header__wrapper--active')
-  bodyOverflow.classList.toggle('body__active-menu')
 })
 
 menuBackground.addEventListener('click', () => {
@@ -29,7 +45,6 @@ menuBackground.addEventListener('click', () => {
     buttonMenu.classList.remove('header__button--close');
     menuNavigation.classList.remove('main-nav--active');
     menuBackground.classList.remove('header__wrapper--active');
-    bodyOverflow.classList.remove('body__active-menu');
   }
 })
 
@@ -52,3 +67,10 @@ new Swiper('.swiper-news', {
   spaceBetween: 20,
   slidesPerView: 1.5,
 })
+
+if (window.innerWidth >= 1440) {
+  console.log('done!')
+}
+else {
+  console.log('small')
+}

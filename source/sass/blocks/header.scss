@@ -51,6 +51,11 @@
   transform: rotate(45deg) translate(-9px, -6px);
 }
 
+.header__button--close {
+  position: fixed;
+  right: 19px;
+}
+
 .header__wrapper {
   display: none;
 }
@@ -64,4 +69,23 @@
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 2;
   display: flex;
+}
+
+@media (min-width: variables.$desktop-width) {
+  .header {
+    @include mixins.container-desktop;
+    padding-top: 70px;
+    justify-content: flex-start;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+
+  .header__button {
+    display: none;
+  }
+
+  .header__logo {
+    margin-right: 213px;
+  }
 }
