@@ -1,0 +1,53 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
+.footer {
+  background-color: variables.$grey;
+}
+
+.footer__wrapper {
+  @include mixins.container-mobile;
+  padding-top: 80px;
+  padding-bottom: 167px;
+}
+
+.footer__title {
+  margin: 0;
+  margin-bottom: 10px;
+  @include mixins.mplus1p-medium;
+  font-size: 16px;
+  line-height: 24px;
+  color: variables.$white;
+}
+
+.footer__description {
+  margin: 0;
+  margin-bottom: 25px;
+  color: variables.$white;
+  font-size: 14px;
+  line-height: 21px;
+  @include mixins.mplus1p-medium;
+}
+
+.footer__link {
+  display: inline-block;
+  color: variables.$white;
+  @include mixins.mplus1p-medium;
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 41px;
+}
+
+.footer__navigation-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__navigation-icon {
+  display: block;
+}

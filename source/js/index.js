@@ -2,6 +2,20 @@ const buttonMenu = document.querySelector('.header__button');
 const menuBackground = document.querySelector('.header__wrapper');
 const menuNavigation = document.querySelector('.main-nav');
 const bodyOverflow = document.querySelector('.body');
+const accordionItems = document.querySelectorAll('.faq__item');
+
+accordionItems.forEach((item) => {
+  item.addEventListener('click', () => {
+    if (item.classList.contains('faq__item--active')) {
+      item.classList.remove('faq__item--active')
+    }
+    else {
+      accordionItems.forEach((el) => {
+     el.classList.remove('faq__item--active')})
+     item.classList.toggle('faq__item--active')
+    }
+  })
+})
 
 buttonMenu.addEventListener('click', () => {
   menuNavigation.classList.toggle('main-nav--active');
@@ -28,4 +42,13 @@ new Swiper('.swiper', {
     boolean: true,
   },
   spaceBetween: 20,
+  initialSlide: 1,
+})
+
+new Swiper('.swiper-news', {
+  loop: {
+    boolean: true,
+  },
+  spaceBetween: 20,
+  slidesPerView: 1.5,
 })

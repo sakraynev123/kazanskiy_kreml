@@ -1,0 +1,9 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
+.section-title {
+  @include mixins.mplus1p-medium;
+  font-size: 40px;
+  line-height: 85px;
+  letter-spacing: -0.03em;
+}

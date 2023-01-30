@@ -1,0 +1,13 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
+.news {
+  padding: 0 0 80px 15px;
+  background-color: variables.$black;
+}
+
+.news__title {
+  margin: 0;
+  margin-bottom: 20px;
+  color: variables.$white;
+}

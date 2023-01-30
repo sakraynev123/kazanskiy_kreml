@@ -1,0 +1,20 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
+.subscription {
+  padding: 30px 15px 50px;
+}
+
+.subscription__title {
+  margin: 0;
+  margin-bottom: 20px;
+  color: variables.$black;
+}
+
+.subscription__description {
+  margin: 0;
+  margin-bottom: 20px;
+  @include mixins.mplus1p-regular;
+  font-size: 16px;
+  line-height: 20px;
+}
