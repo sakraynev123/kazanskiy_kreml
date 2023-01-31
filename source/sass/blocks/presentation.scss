@@ -5,3 +5,11 @@
   background-color: variables.$black;
   padding-bottom: 80px;
 }
+
+@media (min-width: variables.$desktop-width) {
+  .presentation {
+    padding: 0;
+    padding-top: 75px;
+    padding-bottom: 150px;
+  }
+}

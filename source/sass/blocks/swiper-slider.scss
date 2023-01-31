@@ -79,3 +79,22 @@
   font-size: 14px;
   line-height: 21px;
 }
+
+@media (min-width: variables.$desktop-width) {
+  .swiper-slider__image {
+    width: 1240px;
+    height: 650px;
+  }
+
+  .swiper__button-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .swiper-slide__news-image {
+    height: 264px;
+    width: 100%;
+    object-fit: cover;
+  }
+}

@@ -7,3 +7,9 @@
   line-height: 85px;
   letter-spacing: -0.03em;
 }
+
+@media (min-width: variables.$desktop-width) {
+  .section-title {
+    font-size: 80px;
+  }
+}

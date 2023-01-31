@@ -3,9 +3,6 @@
 
 .footer {
   background-color: variables.$grey;
-}
-
-.footer__wrapper {
   @include mixins.container-mobile;
   padding-top: 80px;
   padding-bottom: 167px;
@@ -50,4 +47,22 @@
 
 .footer__navigation-icon {
   display: block;
+}
+
+@media (min-width: variables.$desktop-width) {
+  .footer {
+    @include mixins.container-desktop;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    display: flex;
+    gap: 119px;
+  }
+
+  .footer__text-content {
+    width: 400px;
+  }
+
+  .footer__link {
+    margin: 0;
+  }
 }

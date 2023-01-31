@@ -18,3 +18,17 @@
   font-size: 16px;
   line-height: 20px;
 }
+
+@media (min-width: variables.$desktop-width) {
+  .subscription {
+    padding: 50px 100px;
+  }
+
+  .subscription__title {
+    margin-bottom: 30px;
+  }
+
+  .subscription__description {
+    max-width: 400px;
+  }
+}

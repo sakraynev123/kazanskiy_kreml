@@ -6,6 +6,13 @@ const accordionItems = document.querySelectorAll('.faq__item');
 const navItems = document.querySelectorAll('.secondery-nav__link');
 const seconderyNav = document.querySelectorAll('.secondery-nav');
 const mainNavItems = document.querySelectorAll('.main-nav__item');
+const fieldTel = document.querySelector('.form__field-tel');
+
+let maskOptions = {
+  mask: '+7 (000)000-00-00'
+}
+let mask = IMask(fieldTel, maskOptions)
+
 
 mainNavItems.forEach((item) => {
   item.addEventListener('mouseover', (evt) => {
@@ -48,7 +55,7 @@ menuBackground.addEventListener('click', () => {
   }
 })
 
-new Swiper('.swiper', {
+const mainSwiper = new Swiper('.swiper', {
   navigation: {
     nextEl: '.swiper__custom-button-next',
     prevEl: '.swiper__custom-button-prev',
@@ -58,19 +65,44 @@ new Swiper('.swiper', {
   },
   spaceBetween: 20,
   initialSlide: 1,
+  centeredSlides: true,
+  breakpoints: {
+    1440: {
+      centeredSlides: true,
+      slidesPerView: 1.16,
+      spaceBetween: 20,
+    }
+  }
 })
 
-new Swiper('.swiper-news', {
+const newsSwiper = new Swiper('.swiper-news', {
   loop: {
     boolean: true,
   },
   spaceBetween: 20,
   slidesPerView: 1.5,
+  breakpoints: {
+    1440: {
+      enabled: false,
+    }
+  }
 })
 
-if (window.innerWidth >= 1440) {
-  console.log('done!')
+
+if (window.innerWidth < 1440) {
+  const newsSwiper = new Swiper('.swiper-news', {
+  loop: {
+    boolean: true,
+  },
+  spaceBetween: 20,
+  slidesPerView: 1.5,
+  breakpoints: {
+    1440: {
+      enabled: false,
+    }
+  }
+})
 }
 else {
-  console.log('small')
+  newsSwiper.destroy(false)
 }
