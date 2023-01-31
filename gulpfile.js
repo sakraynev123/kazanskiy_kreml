@@ -50,3 +50,8 @@ export default gulp.series(
   server,
   watcher
 );
+
+export const build = gulp.series(
+  clean,
+  styles,
+)
