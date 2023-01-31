@@ -45,6 +45,18 @@
   justify-content: center;
 }
 
+.footer__navigation-link {
+  path {
+    transition: fill 0.4s;
+  }
+}
+
+.footer__navigation-link:hover {
+  path {
+    fill: variables.$green;
+  }
+}
+
 .footer__navigation-icon {
   display: block;
 }
@@ -64,5 +76,9 @@
 
   .footer__link {
     margin: 0;
+  }
+
+  .footer__navigation-list {
+    align-self: flex-start;
   }
 }

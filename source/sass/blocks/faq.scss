@@ -22,7 +22,7 @@
 
 .faq__item {
   cursor: pointer;
-  padding: 20px 0;
+  padding: 20px 0 19px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -44,7 +44,7 @@
   display: none;
   @include mixins.mplus1p-regular;
   margin: 0;
-  margin-top: 20px;
+  margin-top: 19px;
   color: variables.$white;
   font-size: 16px;
   line-height: 24px;
@@ -56,9 +56,20 @@
     padding-bottom: 100px;
     display: flex;
     justify-content: space-between;
-    gap: 98px;
+    gap: 102px;
   }
   .faq__list {
     flex-grow: 1;
+  }
+  .faq__item {
+    padding: 30px 0 29px;
+  }
+  .faq__item-title {
+    br {
+      display: none;
+    }
+  }
+  .faq__item-description {
+    margin-top: 29px;
   }
 }

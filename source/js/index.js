@@ -81,13 +81,7 @@ const newsSwiper = new Swiper('.swiper-news', {
   },
   spaceBetween: 20,
   slidesPerView: 1.5,
-  breakpoints: {
-    1440: {
-      enabled: false,
-    }
-  }
 })
-
 
 if (window.innerWidth < 1440) {
   const newsSwiper = new Swiper('.swiper-news', {

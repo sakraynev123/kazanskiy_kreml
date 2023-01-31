@@ -55,6 +55,11 @@
   letter-spacing: 0.01em;
   text-decoration: none;
   color: variables.$white;
+  transition: color 0.4s;
+}
+
+.secondery-nav__link:hover {
+  color: variables.$green;
 }
 
 @media(max-width: 1439px) {

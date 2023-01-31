@@ -27,5 +27,8 @@
     "gulp-sass": "^5.1.0",
     "inputmask": "^5.0.7",
     "sass": "^1.57.1"
+  },
+  "dependencies": {
+    "imask": "^6.4.3"
   }
 }

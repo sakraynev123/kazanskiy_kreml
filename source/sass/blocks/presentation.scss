@@ -3,13 +3,13 @@
 
 .presentation {
   background-color: variables.$black;
-  padding-bottom: 80px;
+  padding-bottom: 83px;
 }
 
 @media (min-width: variables.$desktop-width) {
   .presentation {
     padding: 0;
     padding-top: 75px;
-    padding-bottom: 150px;
+    padding-bottom: 154px;
   }
 }

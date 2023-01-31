@@ -12,6 +12,10 @@
   color: variables.$white;
 }
 
+.news__item-link {
+  text-decoration: none;
+}
+
 @media (min-width: variables.$desktop-width) {
   .news {
     @include mixins.container-desktop;
